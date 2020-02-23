@@ -1,15 +1,11 @@
 // dependencies
 const app = require('express')();
 const port = process.env.PORT || 3000;
+let cors = require('cors')
 const routes = require('./routes/index');
 app.use(require('express').json());
 
-app.use(function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'https://projects.acdaling.nl');
-  res.header('Access-Control-Allow-Methods', '*');
-  res.header('Access-Control-Allow-Headers', '*');
-  next();
-});
+app.use(cors());
 
 // Connect all routes to the application
 app.use('/', routes);
