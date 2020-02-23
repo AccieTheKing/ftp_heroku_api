@@ -3,7 +3,7 @@ const paths = require('./paths/index');
 const navigate = require('./navigate/index');
 
 routes.get('/', (req, res) => {
-    res.status(200).json({ message: 'Connected!' });
+    res.status(200).json({ message: 'Welkom, this site is being used to serve some API data!' });
 });
 
 routes.use('/paths', paths);
