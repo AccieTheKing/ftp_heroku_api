@@ -1,0 +1,17 @@
+[
+    {
+        "url": "/navigate",
+        "method": "GET",
+        "controller": "FolderController@all"
+    },
+    {
+        "url": "/navigate",
+        "method": "POST",
+        "controller": "FolderController@navigate"
+    },
+    {
+        "url": "/upload",
+        "method": "POST",
+        "controller": "FolderController@add"
+    }
+]
