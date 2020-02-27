@@ -1,13 +1,17 @@
 // dependencies
 const app = require('express')();
 const port = process.env.PORT || 3000;
-let cors = require('cors')
-const routes = require('./routes/index');
-app.use(require('express').json());
 
+// npm package
+const cors = require('cors');
+const fileUpload = require('express-fileupload');
+const routes = require('./routes/index');
+
+app.use(require('express').json()); // make use of json responses
+app.use(fileUpload()); // able to handle uploaded files
 app.use(cors());
 
-// Connect all routes to the application
+// Connect all request to created routes
 app.use('/', routes);
 
 // turn the server on
